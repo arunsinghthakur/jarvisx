@@ -1,0 +1,645 @@
+/* Compact Node Styles - N8N Style (Icon Only) */
+.compact-node {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: white;
+  border: 1.5px solid #e5e7eb;
+  border-radius: 10px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+  transition: all 0.15s ease;
+  position: relative;
+  cursor: pointer;
+}
+
+.compact-node:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-1px);
+  border-color: #d1d5db;
+}
+
+.compact-node.selected {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.2), 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.compact-node-icon {
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.compact-node-icon .icon-emoji {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* Hide label by default - shown in tooltip on hover */
+.compact-node-label {
+  display: none;
+}
+
+/* Node Type Icon Backgrounds */
+.compact-node-icon.trigger {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+}
+
+.compact-node-icon.agent {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+}
+
+.compact-node-icon.http {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+}
+
+.compact-node-icon.condition {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+}
+
+.compact-node-icon.transform {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+}
+
+.compact-node-icon.file-read {
+  background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%);
+}
+
+.compact-node-icon.file-save {
+  background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
+}
+
+.compact-node-icon.email {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+}
+
+.compact-node-icon.notification {
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+}
+
+.compact-node-icon.chatbot {
+  background: linear-gradient(135deg, #ddd6fe 0%, #c4b5fd 100%);
+}
+
+.compact-node-icon.loop {
+  background: linear-gradient(135deg, #f3e8ff 0%, #d8b4fe 100%);
+}
+
+.compact-node-icon.switch {
+  background: linear-gradient(135deg, #ede9fe 0%, #c4b5fd 100%);
+}
+
+.compact-node-icon.fork {
+  background: linear-gradient(135deg, #cffafe 0%, #67e8f9 100%);
+}
+
+.compact-node-icon.join {
+  background: linear-gradient(135deg, #cffafe 0%, #67e8f9 100%);
+}
+
+.compact-node-icon.error-handler {
+  background: linear-gradient(135deg, #fee2e2 0%, #fca5a5 100%);
+}
+
+.compact-node-icon.approval {
+  background: linear-gradient(135deg, #fef3c7 0%, #fcd34d 100%);
+}
+
+.compact-node-icon.delay {
+  background: linear-gradient(135deg, #f1f5f9 0%, #cbd5e1 100%);
+}
+
+.compact-node-icon.foreach {
+  background: linear-gradient(135deg, #f0abfc 0%, #d946ef 30%, #e879f9 100%);
+}
+
+.compact-node-icon.sub-workflow {
+  background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%);
+}
+
+.compact-node-icon.webhook-response {
+  background: linear-gradient(135deg, #dcfce7 0%, #86efac 100%);
+}
+
+.compact-node-icon.database {
+  background: linear-gradient(135deg, #ede9fe 0%, #a78bfa 100%);
+}
+
+.compact-node-icon.cloud-storage {
+  background: linear-gradient(135deg, #cffafe 0%, #22d3ee 100%);
+}
+
+.compact-node-icon.google-sheets {
+  background: linear-gradient(135deg, #dcfce7 0%, #4ade80 100%);
+}
+
+.compact-node-icon.data-transform {
+  background: linear-gradient(135deg, #ffedd5 0%, #fb923c 100%);
+}
+
+.compact-node-icon.python-code {
+  background: linear-gradient(135deg, #dbeafe 0%, #60a5fa 100%);
+}
+
+/* HTTP Method Indicator */
+.method-indicator {
+  position: absolute;
+  bottom: -3px;
+  right: -3px;
+  font-size: 6px;
+  font-weight: 700;
+  padding: 1px 3px;
+  border-radius: 3px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.method-indicator.method-get {
+  background: #10b981;
+}
+
+.method-indicator.method-post {
+  background: #3b82f6;
+}
+
+.method-indicator.method-put {
+  background: #f59e0b;
+}
+
+.method-indicator.method-delete {
+  background: #ef4444;
+}
+
+/* Compact Handles */
+.compact-handle {
+  width: 6px;
+  height: 6px;
+  border: 1.5px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+}
+
+.compact-handle.source {
+  background: #6366f1;
+  right: -3px;
+}
+
+.compact-handle.target {
+  background: #10b981;
+  left: -3px;
+}
+
+.compact-handle.condition-true {
+  background: #10b981;
+}
+
+.compact-handle.condition-false {
+  background: #ef4444;
+}
+
+/* Multi-Handle Nodes */
+.condition-node.compact-node,
+.loop-node.compact-node,
+.error-handler-node.compact-node,
+.foreach-node.compact-node {
+  width: 48px;
+  height: 40px;
+}
+
+.switch-node.compact-node {
+  width: 48px;
+  min-height: 40px;
+}
+
+.fork-node.compact-node {
+  width: 44px;
+  min-height: 40px;
+}
+
+/* Comment / Sticky Note */
+.comment-node {
+  min-width: 120px;
+  min-height: 60px;
+  padding: 8px 10px;
+  background: #fef9c3;
+  border: 1px solid #fde047;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.06);
+  font-size: 11px;
+  color: #713f12;
+  cursor: pointer;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.comment-node.selected {
+  border-color: #eab308;
+  box-shadow: 0 0 0 2px rgba(234, 179, 8, 0.2);
+}
+
+.comment-node-content {
+  line-height: 1.4;
+}
+
+/* Group Node */
+.group-node {
+  min-width: 200px;
+  min-height: 150px;
+  background: rgba(148, 163, 184, 0.06);
+  border: 1.5px dashed #94a3b8;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.group-node.selected {
+  border-color: #6366f1;
+  background: rgba(99, 102, 241, 0.04);
+}
+
+.group-node-header {
+  padding: 6px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  color: #64748b;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Execution Status Overlays */
+.node-status-running {
+  animation: pulse-border 1.5s ease-in-out infinite;
+}
+
+.node-status-completed .compact-node,
+.node-status-completed.compact-node {
+  border-color: #10b981;
+  box-shadow: 0 0 0 2px rgba(16, 185, 129, 0.2);
+}
+
+.node-status-failed .compact-node,
+.node-status-failed.compact-node {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.2);
+}
+
+@keyframes pulse-border {
+  0%, 100% { box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.3); }
+  50% { box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.15); }
+}
+
+.compact-condition-handles {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.compact-condition-labels {
+  position: absolute;
+  right: 8px;
+  top: 6px;
+  bottom: 6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: none;
+}
+
+.compact-condition-label {
+  font-size: 6px;
+  font-weight: 700;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.compact-condition-label.true {
+  background: #10b981;
+}
+
+.compact-condition-label.false {
+  background: #ef4444;
+}
+
+/* Node Tooltip - Shows label on hover */
+.node-tooltip {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-top: 4px;
+  background: #1f2937;
+  color: white;
+  padding: 5px 8px;
+  border-radius: 5px;
+  font-size: 10px;
+  white-space: nowrap;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  pointer-events: none;
+}
+
+.node-tooltip::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 4px solid transparent;
+  border-bottom-color: #1f2937;
+}
+
+.node-tooltip .tooltip-title {
+  font-weight: 600;
+  color: #fff;
+  font-size: 11px;
+}
+
+.node-tooltip .tooltip-detail {
+  color: #9ca3af;
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+/* Legacy styles kept for backwards compatibility */
+.workflow-node {
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: 10px;
+  min-width: 180px;
+  max-width: 220px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: all 0.15s ease;
+}
+
+.workflow-node:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.workflow-node.selected {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.node-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 12px;
+  border-radius: 8px 8px 0 0;
+  font-size: 11px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.node-header.trigger {
+  background: linear-gradient(135deg, #dcfce7 0%, #bbf7d0 100%);
+  color: #166534;
+}
+
+.node-header.agent {
+  background: linear-gradient(135deg, #e0e7ff 0%, #c7d2fe 100%);
+  color: #3730a3;
+}
+
+.node-header.http {
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+}
+
+.node-header.condition {
+  background: linear-gradient(135deg, #f3e8ff 0%, #e9d5ff 100%);
+  color: #6b21a8;
+}
+
+.node-header.transform {
+  background: linear-gradient(135deg, #e0f2fe 0%, #bae6fd 100%);
+  color: #0369a1;
+}
+
+.node-header.file-read {
+  background: linear-gradient(135deg, #dbeafe 0%, #93c5fd 100%);
+  color: #1e40af;
+}
+
+.node-header.file-save {
+  background: linear-gradient(135deg, #ccfbf1 0%, #99f6e4 100%);
+  color: #0f766e;
+}
+
+.node-header.email {
+  background: linear-gradient(135deg, #fce7f3 0%, #fbcfe8 100%);
+  color: #9d174d;
+}
+
+.node-header.notification {
+  background: linear-gradient(135deg, #ffedd5 0%, #fed7aa 100%);
+  color: #9a3412;
+}
+
+.node-icon {
+  font-size: 12px;
+}
+
+.node-type {
+  flex: 1;
+}
+
+.node-body {
+  padding: 10px 12px;
+}
+
+.node-label {
+  font-size: 13px;
+  font-weight: 500;
+  color: #1f2937;
+  margin-bottom: 6px;
+}
+
+.node-detail {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.detail-label {
+  font-size: 10px;
+  font-weight: 500;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.detail-value {
+  font-size: 11px;
+  color: #6b7280;
+}
+
+.detail-value.truncate {
+  max-width: 150px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.detail-value.code {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 10px;
+  background: #f3f4f6;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.detail-value.url {
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 10px;
+}
+
+.method-badge {
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.node-handle {
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+}
+
+.node-handle.source {
+  background: #6366f1;
+}
+
+.node-handle.target {
+  background: #10b981;
+}
+
+.node-handle.condition-true {
+  background: #10b981;
+}
+
+.node-handle.condition-false {
+  background: #ef4444;
+}
+
+.condition-node {
+  position: relative;
+}
+
+.condition-labels {
+  position: absolute;
+  right: 20px;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  pointer-events: none;
+}
+
+.condition-label {
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.condition-label.true {
+  color: #10b981;
+}
+
+.condition-label.false {
+  color: #ef4444;
+}
+
+.trigger-node .node-handle.source {
+  right: -6px;
+}
+
+.agent-node .node-handle.target,
+.http-node .node-handle.target,
+.condition-node .node-handle.target,
+.transform-node .node-handle.target {
+  left: -6px;
+}
+
+.agent-node .node-handle.source,
+.http-node .node-handle.source,
+.transform-node .node-handle.source {
+  right: -6px;
+}
+
+.file-input-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+  color: #92400e;
+  border-radius: 10px;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: help;
+}
+
+.format-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  color: white;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.file-read-node .node-handle.target,
+.file-save-node .node-handle.target,
+.email-node .node-handle.target,
+.notification-node .node-handle.target {
+  left: -6px;
+}
+
+.file-read-node .node-handle.source {
+  right: -6px;
+}
+
+.platform-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 8px;
+  color: white;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 600;
+}
+
+.attachment-badge,
+.data-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 6px;
+  background: #f3f4f6;
+  color: #6b7280;
+  border-radius: 4px;
+  font-size: 9px;
+  font-weight: 500;
+}

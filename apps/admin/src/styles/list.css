@@ -1,0 +1,108 @@
+/* List Styles - Dark Theme */
+
+.section-content {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-top: 24px;
+}
+
+.section-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.list-container {
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.items-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+  cursor: pointer;
+}
+
+.list-item:last-child {
+  border-bottom: none;
+}
+
+.list-item:hover {
+  background: var(--bg-hover);
+}
+
+.list-item.selected {
+  background: rgba(99, 102, 241, 0.1);
+  border-left: 3px solid var(--accent-indigo);
+}
+
+.list-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.list-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.list-item-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.list-item-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.list-item-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.meta-item {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+.list-item-description {
+  margin: 6px 0 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.list-item-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+  flex-shrink: 0;
+}

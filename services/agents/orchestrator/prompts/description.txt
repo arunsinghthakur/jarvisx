@@ -1,0 +1,1 @@
+Intelligent assistant that coordinates specialized sub-agents to help users with various tasks. Routes requests to the best-suited capability and synthesizes results.

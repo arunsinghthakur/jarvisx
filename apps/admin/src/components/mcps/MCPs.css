@@ -1,0 +1,91 @@
+/* MCPs - Dark Theme */
+
+.mcps-section {
+  max-width: 1600px;
+}
+
+.mcps-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+  padding-top: 24px;
+}
+
+.mcps-header h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.mcps-list-container {
+  background: var(--bg-card);
+  border-radius: 16px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.mcp-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--border-color);
+  transition: background 0.2s ease;
+}
+
+.mcp-item:last-child {
+  border-bottom: none;
+}
+
+.mcp-item:hover {
+  background: var(--bg-hover);
+}
+
+.mcp-item-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.mcp-item-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.mcp-item-header h3 {
+  margin: 0;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.mcp-item-badges {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.mcp-item-meta {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 6px;
+  flex-wrap: wrap;
+}
+
+.mcp-item-description {
+  margin: 6px 0 0 0;
+  color: var(--text-secondary);
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.mcp-item-actions {
+  display: flex;
+  gap: 8px;
+  margin-left: 16px;
+  flex-shrink: 0;
+}

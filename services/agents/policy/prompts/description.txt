@@ -1,0 +1,1 @@
+Policy Evaluator is a compliance agent that evaluates requests and actions against organizational policies and rules. It determines whether operations are allowed, denied, or require approval based on configurable policy rules for data protection, access control, and governance.

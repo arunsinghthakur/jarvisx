@@ -1,0 +1,16 @@
+{
+  "include": [
+    "packages/core",
+    "services",
+    "scripts",
+    "migrations"
+  ],
+  "extraPaths": [
+    "packages/core",
+    "."
+  ],
+  "pythonVersion": "3.13",
+  "typeCheckingMode": "off",
+  "reportMissingImports": "warning",
+  "reportMissingTypeStubs": "none"
+}

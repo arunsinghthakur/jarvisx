@@ -1,0 +1,1 @@
+Knowledge Base Agent - Searches and retrieves relevant information from the tenant's knowledge base. Uses semantic search to find the most relevant content for user queries. Returns contextual information from documents, snippets, and other stored knowledge.

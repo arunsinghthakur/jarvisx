@@ -1,0 +1,377 @@
+.voice-login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #0f0f1a 0%, #1a1a2e 100%);
+}
+
+.voice-login-card {
+  width: 100%;
+  max-width: 360px;
+  padding: 40px 32px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  margin: 20px;
+}
+
+.voice-login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.voice-login-logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+}
+
+.voice-login-logo svg {
+  filter: drop-shadow(0 4px 12px rgba(99, 102, 241, 0.4));
+}
+
+.voice-login-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+.voice-login-header p {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 8px 0 0 0;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.voice-login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.voice-login-error {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.15);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 10px;
+  color: #fca5a5;
+  font-size: 13px;
+}
+
+.voice-login-error svg {
+  flex-shrink: 0;
+  color: #f87171;
+}
+
+.voice-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.voice-input-icon {
+  position: absolute;
+  left: 14px;
+  color: rgba(255, 255, 255, 0.4);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1;
+}
+
+.voice-login-field input {
+  width: 100%;
+  padding: 14px 14px 14px 44px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.voice-login-field input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.voice-login-field input:focus {
+  outline: none;
+  border-color: rgba(99, 102, 241, 0.5);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+
+.voice-login-field input:focus + .voice-input-icon,
+.voice-input-wrapper:focus-within .voice-input-icon {
+  color: rgba(99, 102, 241, 0.8);
+}
+
+.voice-login-field input:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.voice-password-toggle {
+  position: absolute;
+  right: 10px;
+  padding: 8px;
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.voice-password-toggle:hover {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.voice-login-button {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 15px rgba(99, 102, 241, 0.35);
+}
+
+.voice-login-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.45);
+}
+
+.voice-login-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.voice-login-footer {
+  margin-top: 24px;
+  text-align: center;
+}
+
+.voice-login-footer p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.voice-login-footer code {
+  padding: 2px 6px;
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 4px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: monospace;
+  font-size: 11px;
+}
+
+.voice-forgot-link {
+  text-align: center;
+  margin-top: 12px;
+}
+
+.voice-forgot-link button {
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  transition: color 0.2s ease;
+}
+
+.voice-forgot-link button:hover {
+  color: #a5b4fc;
+}
+
+/* SSO Styles */
+.voice-field-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  margin-top: 8px;
+  display: block;
+}
+
+.voice-email-display {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+}
+
+.voice-email-display span {
+  font-size: 14px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.voice-email-display button {
+  background: none;
+  border: none;
+  color: #a5b4fc;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 4px 8px;
+}
+
+.voice-email-display button:hover {
+  color: #c4b5fd;
+}
+
+.voice-sso-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.voice-sso-org {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: rgba(99, 102, 241, 0.08);
+  border: 1px solid rgba(99, 102, 241, 0.15);
+  border-radius: 12px;
+}
+
+.voice-org-badge {
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+
+.voice-org-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.voice-org-name {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.voice-org-hint {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.voice-sso-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 14px 20px;
+  background: var(--provider-color, #4285f4);
+  border: none;
+  border-radius: 10px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.voice-sso-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+  filter: brightness(1.1);
+}
+
+.voice-sso-button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.voice-provider-icon {
+  width: 22px;
+  height: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.voice-divider {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.voice-divider::before,
+.voice-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.voice-divider span {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.4);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.voice-password-fallback {
+  width: 100%;
+  padding: 12px 16px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 10px;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.voice-password-fallback:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+}
+
+.voice-password-fallback:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

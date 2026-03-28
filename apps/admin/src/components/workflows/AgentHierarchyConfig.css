@@ -1,0 +1,231 @@
+.agent-hierarchy-wrapper {
+  padding: 0;
+  margin: 0;
+}
+
+.agent-hierarchy-config {
+  padding: 0;
+  margin: 0;
+}
+
+.agent-hierarchy-loading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 16px;
+  color: #94a3b8;
+  font-size: 13px;
+}
+
+.agent-hierarchy-loading .spinner {
+  display: inline-block;
+}
+
+.agent-hierarchy-error {
+  padding: 12px;
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  border-radius: 6px;
+  color: #f87171;
+  font-size: 13px;
+}
+
+.agent-hierarchy-empty {
+  padding: 16px;
+  color: #64748b;
+  font-size: 13px;
+  text-align: center;
+}
+
+.agent-hierarchy-config.depth-0 {
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.agent-hierarchy-item {
+  margin-bottom: 4px;
+  border-radius: 6px;
+}
+
+.agent-hierarchy-item.depth-0 {
+  background: rgba(255, 255, 255, 0.03);
+  padding: 8px;
+}
+
+.agent-hierarchy-item.depth-1 {
+  margin-left: 20px;
+  padding: 6px;
+  border-left: 2px solid rgba(99, 102, 241, 0.3);
+}
+
+.agent-hierarchy-item.depth-2 {
+  margin-left: 20px;
+  padding: 6px;
+  border-left: 2px solid rgba(16, 185, 129, 0.3);
+}
+
+.agent-hierarchy-item.depth-3 {
+  margin-left: 20px;
+  padding: 6px;
+  border-left: 2px solid rgba(245, 158, 11, 0.3);
+}
+
+.agent-hierarchy-item.depth-4,
+.agent-hierarchy-item.depth-5,
+.agent-hierarchy-item.depth-6,
+.agent-hierarchy-item.depth-7,
+.agent-hierarchy-item.depth-8,
+.agent-hierarchy-item.depth-9 {
+  margin-left: 20px;
+  padding: 6px;
+  border-left: 2px solid rgba(139, 92, 246, 0.3);
+}
+
+.agent-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.expand-icon {
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+.expand-icon.clickable {
+  cursor: pointer;
+  color: #6366f1;
+  transition: all 0.15s ease;
+}
+
+.expand-icon.clickable:hover {
+  color: #818cf8;
+  background: rgba(99, 102, 241, 0.1);
+  border-radius: 4px;
+}
+
+.expand-icon.disabled {
+  opacity: 0.3;
+  cursor: default;
+}
+
+.expand-icon .no-children {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #475569;
+}
+
+.agent-checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  flex: 1;
+  user-select: none;
+}
+
+.agent-checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  accent-color: #6366f1;
+}
+
+.agent-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6366f1;
+  font-size: 14px;
+}
+
+.agent-name {
+  font-weight: 500;
+  color: #e2e8f0;
+  font-size: 13px;
+}
+
+.sub-agent-count {
+  font-size: 11px;
+  color: #64748b;
+  margin-left: auto;
+  padding: 2px 6px;
+  background: rgba(100, 116, 139, 0.15);
+  border-radius: 4px;
+}
+
+.agent-description {
+  font-size: 11px;
+  color: #64748b;
+  margin-left: 44px;
+  margin-top: 2px;
+  line-height: 1.4;
+}
+
+.sub-agents-container {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.hierarchy-title {
+  font-size: 12px;
+  font-weight: 600;
+  color: #94a3b8;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.agent-hierarchy-section {
+  margin-top: 12px;
+}
+
+.agent-hierarchy-section > label {
+  display: block;
+  margin-bottom: 4px;
+}
+
+.agent-hierarchy-section > .form-hint {
+  display: block;
+  margin-bottom: 12px;
+}
+
+.agent-hierarchy-item:hover > .agent-row {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.agent-checkbox-label input[type="checkbox"]:checked + .agent-icon {
+  color: #10b981;
+}
+
+.agent-checkbox-label input[type="checkbox"]:not(:checked) ~ .agent-name {
+  color: #94a3b8;
+}
+
+@media (max-width: 768px) {
+  .agent-hierarchy-item.depth-1,
+  .agent-hierarchy-item.depth-2,
+  .agent-hierarchy-item.depth-3,
+  .agent-hierarchy-item.depth-4,
+  .agent-hierarchy-item.depth-5,
+  .agent-hierarchy-item.depth-6,
+  .agent-hierarchy-item.depth-7,
+  .agent-hierarchy-item.depth-8,
+  .agent-hierarchy-item.depth-9 {
+    margin-left: 12px;
+  }
+  
+  .agent-description {
+    margin-left: 36px;
+  }
+}

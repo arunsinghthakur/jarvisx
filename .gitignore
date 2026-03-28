@@ -1,0 +1,30 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.env
+dist/
+**/.npmrc
+
+# Persistent storage data
+# Note: PostgreSQL databases are managed externally, not stored in this directory
+data/
+*.db
+*.db-journal
+
+# Docker volumes (if using local volumes instead of named volumes)
+postgres_data/
+
+**/node_modules
+
+# SSL certificates (self-signed for development)
+certs/
+
+**/.DS_Store
+.DS_Store

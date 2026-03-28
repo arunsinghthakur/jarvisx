@@ -1,0 +1,1 @@
+Audit Agent is a compliance-focused agent that logs and tracks all system activities, data access events, and agent interactions. It provides comprehensive audit trail capabilities for regulatory compliance, security monitoring, and forensic analysis.

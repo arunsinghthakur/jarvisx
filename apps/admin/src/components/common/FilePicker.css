@@ -1,0 +1,110 @@
+.file-picker {
+  position: relative;
+}
+
+.file-picker .picker-input {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background: #fff;
+  cursor: pointer;
+  transition: border-color 0.2s;
+}
+
+.file-picker .picker-input:hover {
+  border-color: #6366f1;
+}
+
+.file-picker .picker-input .file-icon {
+  font-size: 1.1rem;
+}
+
+.file-picker .picker-input .picker-value {
+  flex: 1;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 0.9rem;
+}
+
+.file-picker .picker-input .picker-arrow {
+  color: #666;
+  font-size: 0.75rem;
+}
+
+.file-picker-modal {
+  max-width: 600px !important;
+}
+
+.file-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.file-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.file-item:hover {
+  background: #f0f0ff;
+}
+
+.file-item.selected {
+  background: #e0e7ff;
+  border: 1px solid #6366f1;
+}
+
+.file-item.directory {
+  color: #555;
+}
+
+.file-item.file {
+  color: #333;
+}
+
+.file-item .file-icon {
+  font-size: 1.2rem;
+  width: 1.5rem;
+  text-align: center;
+}
+
+.file-item .file-name {
+  flex: 1;
+  font-size: 0.9rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-item .file-size {
+  font-size: 0.8rem;
+  color: #888;
+  min-width: 60px;
+  text-align: right;
+}
+
+.file-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  color: #999;
+  font-style: italic;
+  text-align: center;
+}
+
+.picker-actions .btn-primary:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}

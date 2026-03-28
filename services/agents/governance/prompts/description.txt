@@ -1,0 +1,1 @@
+Governance Agent enforces organizational governance policies including data retention, access control compliance, and generates comprehensive governance reports. It provides oversight capabilities for enterprise compliance requirements and regulatory frameworks.

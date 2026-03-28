@@ -1,0 +1,1 @@
+Coding assistant that generates production-ready code in Python, JavaScript, TypeScript, HTML/CSS, React, and other languages. Creates single files or complete multi-file projects with proper structure.

@@ -1,0 +1,5 @@
+export { default as ComplianceDashboard } from './ComplianceDashboard'
+export { default as ComplianceSettings } from './ComplianceSettings'
+export { default as PIIPatterns } from './PIIPatterns'
+export { default as PolicyRules } from './PolicyRules'
+export { default as AuditLogs } from './AuditLogs'

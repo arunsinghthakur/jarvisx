@@ -1,0 +1,84 @@
+.chart-container {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-lg);
+  padding: 20px;
+  margin: 16px 0;
+  width: 100%;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.chart-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.chart-error {
+  background: var(--color-error-bg);
+  border: 1px solid var(--color-error-border);
+  border-radius: var(--border-radius-md);
+  padding: 16px;
+  color: var(--color-error);
+  text-align: center;
+  font-size: 14px;
+}
+
+.chart-tooltip {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius-md);
+  padding: 10px 14px;
+  box-shadow: var(--shadow-md);
+}
+
+.chart-tooltip-label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-primary);
+  margin: 0 0 6px 0;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--color-border-light);
+}
+
+.chart-tooltip-value {
+  font-size: 13px;
+  margin: 4px 0;
+  color: var(--color-text-secondary);
+}
+
+.recharts-legend-wrapper {
+  padding-top: 10px !important;
+}
+
+.recharts-legend-item-text {
+  color: var(--color-text-secondary) !important;
+  font-size: 13px !important;
+}
+
+.recharts-cartesian-axis-tick-value {
+  font-size: 12px;
+}
+
+.recharts-default-tooltip {
+  background: var(--color-surface) !important;
+  border: 1px solid var(--color-border) !important;
+  border-radius: var(--border-radius-md) !important;
+}
+
+@media (max-width: 600px) {
+  .chart-container {
+    padding: 12px;
+  }
+
+  .chart-title {
+    font-size: 14px;
+  }
+
+  .recharts-wrapper {
+    font-size: 11px;
+  }
+}

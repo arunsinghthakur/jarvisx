@@ -1,0 +1,597 @@
+.workflow-editor {
+  position: fixed;
+  inset: 0;
+  background: #f8fafc;
+  z-index: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.editor-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 24px;
+  background: white;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.editor-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.editor-title h2 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.unsaved-badge {
+  font-size: 12px;
+  padding: 4px 8px;
+  background: #fef3c7;
+  color: #d97706;
+  border-radius: 4px;
+}
+
+.editor-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.editor-body {
+  flex: 1;
+  display: flex;
+  overflow: hidden;
+}
+
+.node-palette {
+  width: 200px;
+  background: white;
+  border-right: 1px solid #e5e7eb;
+  overflow-y: auto;
+  padding: 12px;
+}
+
+.node-palette h3 {
+  margin: 0 0 12px;
+  font-size: 11px;
+  font-weight: 600;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.node-category {
+  margin-bottom: 16px;
+}
+
+.node-category h4 {
+  margin: 0 0 6px;
+  font-size: 10px;
+  font-weight: 500;
+  color: #9ca3af;
+  text-transform: uppercase;
+}
+
+.node-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.palette-node {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: grab;
+  transition: all 0.15s ease;
+}
+
+.palette-node:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+  transform: translateX(2px);
+}
+
+.palette-node:active {
+  cursor: grabbing;
+}
+
+.node-icon {
+  font-size: 14px;
+}
+
+.node-label {
+  font-size: 12px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.flow-canvas {
+  flex: 1;
+  height: 100%;
+}
+
+.react-flow__node {
+  border-radius: 8px;
+  font-size: 13px;
+}
+
+.flow-panel {
+  background: white;
+  padding: 6px 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.panel-actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.panel-btn {
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  background: white;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+  transition: all 0.15s ease;
+}
+
+.panel-btn:hover {
+  background: #f3f4f6;
+  border-color: #d1d5db;
+}
+
+.panel-btn:active {
+  background: #e5e7eb;
+}
+
+.panel-info {
+  font-size: 13px;
+  color: #6b7280;
+}
+
+.node-config-panel {
+  width: 280px;
+  background: white;
+  border-left: 1px solid #e5e7eb;
+  overflow-y: auto;
+}
+
+.config-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.config-header h3 {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.btn-delete {
+  padding: 6px 12px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 6px;
+  color: #dc2626;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-delete:hover {
+  background: #fee2e2;
+}
+
+.config-form {
+  padding: 12px 14px;
+}
+
+.config-form .form-group {
+  margin-bottom: 14px;
+}
+
+.config-form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 11px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.config-form input[type="text"],
+.config-form select,
+.config-form textarea {
+  width: 100%;
+  padding: 7px 9px;
+  border: 1px solid #d1d5db;
+  border-radius: 5px;
+  font-size: 12px;
+  color: #1f2937;
+  transition: all 0.15s ease;
+}
+
+.config-form input:focus,
+.config-form select:focus,
+.config-form textarea:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 2px rgba(99, 102, 241, 0.1);
+}
+
+.config-form input:disabled {
+  background: #f3f4f6;
+  color: #6b7280;
+}
+
+.config-form textarea {
+  resize: vertical;
+  min-height: 80px;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 12px;
+}
+
+.form-hint {
+  display: block;
+  margin-top: 4px;
+  font-size: 11px;
+  color: #9ca3af;
+}
+
+.retry-config-section {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.retry-config-section summary {
+  font-size: 12px;
+  font-weight: 600;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px 0;
+}
+
+.retry-config-section[open] summary {
+  margin-bottom: 8px;
+}
+
+.config-form .checkbox-group {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid #e5e7eb;
+}
+
+.config-form .checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  color: #374151;
+}
+
+.config-form .checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  cursor: pointer;
+  accent-color: #6366f1;
+}
+
+.react-flow__minimap {
+  background: #f8fafc;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #e5e7eb;
+}
+
+.react-flow__minimap-mask {
+  fill: rgba(99, 102, 241, 0.1);
+}
+
+.react-flow__controls {
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  border: 1px solid #e5e7eb;
+}
+
+.react-flow__controls-button {
+  border: none;
+  background: white;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.react-flow__controls-button:hover {
+  background: #f3f4f6;
+}
+
+.react-flow__controls-button svg {
+  width: 14px;
+  height: 14px;
+}
+
+.react-flow__edge-path {
+  stroke: #94a3b8;
+  stroke-width: 1.5;
+}
+
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge:focus .react-flow__edge-path,
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: #6366f1;
+}
+
+.react-flow__background {
+  background-color: #fafbfc;
+}
+
+.btn-run {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 16px;
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.btn-run:hover:not(:disabled) {
+  opacity: 0.9;
+  transform: translateY(-1px);
+}
+
+.btn-run:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-run.running {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+}
+
+.run-spinner {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.execution-status-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 24px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.execution-status-bar.status-pending {
+  background: #fef3c7;
+  color: #d97706;
+}
+
+.execution-status-bar.status-running {
+  background: #dbeafe;
+  color: #2563eb;
+}
+
+.execution-status-bar.status-completed {
+  background: #dcfce7;
+  color: #16a34a;
+}
+
+.execution-status-bar.status-failed {
+  background: #fee2e2;
+  color: #dc2626;
+}
+
+.status-content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.status-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid currentColor;
+  border-top-color: transparent;
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+}
+
+.status-label {
+  font-weight: 600;
+}
+
+.status-progress {
+  opacity: 0.8;
+  font-weight: 400;
+}
+
+.status-dismiss {
+  background: none;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  color: inherit;
+  padding: 0 4px;
+}
+
+.status-dismiss:hover {
+  opacity: 1;
+}
+
+.react-flow__node.node-status-pending {
+  box-shadow: 0 0 0 3px #fbbf24;
+}
+
+.react-flow__node.node-status-running {
+  box-shadow: 0 0 0 3px #3b82f6;
+  animation: pulse-ring 1.5s ease-in-out infinite;
+}
+
+.react-flow__node.node-status-completed {
+  box-shadow: 0 0 0 3px #22c55e;
+}
+
+.react-flow__node.node-status-failed {
+  box-shadow: 0 0 0 3px #ef4444;
+}
+
+@keyframes pulse-ring {
+  0% { box-shadow: 0 0 0 3px #3b82f6; }
+  50% { box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.4); }
+  100% { box-shadow: 0 0 0 3px #3b82f6; }
+}
+
+.url-display {
+  display: flex;
+  gap: 8px;
+}
+
+.url-display input {
+  flex: 1;
+  background: #f9fafb;
+  color: #374151;
+  font-family: 'Monaco', 'Menlo', monospace;
+  font-size: 11px;
+}
+
+.btn-copy {
+  padding: 8px 12px;
+  background: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.btn-copy:hover {
+  background: #4f46e5;
+}
+
+.checkbox-group {
+  margin-bottom: 12px;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  color: #374151;
+}
+
+.checkbox-label input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+}
+
+.agent-checkbox-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 8px;
+  max-height: 280px;
+  overflow-y: auto;
+  padding: 8px;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+}
+
+.agent-checkbox-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.agent-checkbox-item:hover {
+  border-color: #3b82f6;
+  background: #f0f9ff;
+}
+
+.agent-checkbox-item input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  margin-top: 2px;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.agent-checkbox-item input[type="checkbox"]:checked + .agent-info .agent-name {
+  color: #1d4ed8;
+}
+
+.agent-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.agent-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #374151;
+}
+
+.agent-description {
+  font-size: 11px;
+  color: #6b7280;
+  line-height: 1.3;
+}

@@ -1,0 +1,14 @@
+{
+  "name": "@jarvisx/ui-shared",
+  "version": "0.1.0",
+  "description": "Shared UI constants and utilities for JarvisX frontends",
+  "main": "src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./constants": "./src/constants/index.js",
+    "./constants/systemAgents": "./src/constants/systemAgents.js"
+  },
+  "files": [
+    "src"
+  ]
+}

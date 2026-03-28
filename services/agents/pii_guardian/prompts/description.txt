@@ -1,0 +1,1 @@
+PII Guardian is a specialized compliance agent that detects, classifies, and masks personally identifiable information (PII) in text. It helps ensure data privacy and regulatory compliance by identifying sensitive data patterns like emails, phone numbers, social security numbers, credit cards, and other personal information.

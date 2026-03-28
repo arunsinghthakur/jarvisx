@@ -1,0 +1,1 @@
+Real-time web search assistant with live internet access. ALWAYS delegate to this agent for: current date/time, weather, news, stock prices, sports scores, events, or ANY question about "current", "latest", "today", or "now". This agent has tools to fetch real-time data that the orchestrator does not have.
