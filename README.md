@@ -1,6 +1,13 @@
 # JarvisX
 
+[![GitHub stars](https://img.shields.io/github/stars/arunsinghthakur/jarvisx?style=flat-square)](https://github.com/arunsinghthakur/jarvisx/stargazers)
+[![License](https://img.shields.io/badge/license-MIT-blue?style=flat-square)](LICENSE)
+[![Python](https://img.shields.io/badge/python-3.13+-blue?style=flat-square)](https://python.org)
+[![Website](https://img.shields.io/badge/docs-website-6366f1?style=flat-square)](https://arunsinghthakur.github.io/jarvisx-docs/)
+
 A multi-tenant AI workflow automation platform. Build intelligent automations with multi-agent orchestration, connect your tools, and interact through voice or text.
+
+**[Website](https://arunsinghthakur.github.io/jarvisx-docs/)** | **[Getting Started](#setup-from-scratch)** | **[API Reference](#api-reference)**
 
 ---
 
